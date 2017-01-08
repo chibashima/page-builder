@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ddd;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.btn-edit,.btn-create {
+    background: #EEE;
+    border-top: 3px solid #DDD;
+    border-left: 3px solid #DDD;
+    border-right: 3px solid #BBB;
+    border-bottom: 3px solid #BBB;
+    cursor: pointer;
+    color: #111;
+    padding: 10px 0;
+
+    height: 50px;
+    margin: auto;
+    text-align: center;
+
+    /*position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+    width: 200px;
+}
+
+/*編集のヘッダー*/
+.edit-view-header {
+    background: #fff;
+    box-shadow: 0 0 15px 0 rgba(22, 45, 61, 0.5);
+    height: 40px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.edit-view-header-title {
+    background: #eee;
+    height: 40px;
+    float: left;
+    width: 200px;
+}
+.edit-view-header-menu {
+    background: #eee;
+    height: 40px;
+    float: left;
+    margin: 0 0 0 10px;
+    width: 600px;
+}
+.edit-view-header-save {
+    background: #eee;
+    cursor: pointer;
+    height: 40px;
+    padding: 10px 0;
+    position: absolute;
+    right: 10px;
+    width: 100px;
+}
+
+/*編集のメニュー*/
+.edit-view-menu {
+    left: 10px;
+    margin: 10px 0 0 0;
+    position: absolute;
+    width: 200px;
+}
+.edit-view-menu-item {
+    background: #EEE;
+    cursor: pointer;
+    color: #111;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+/*編集のコンテンツ*/
+.edit-view-contents {
+    margin: 40px 0 0 0;
+}
+.edit-view-contents-inner {
+    left: 220px;
+    margin: 10px 0 0 0;
+    position: absolute;
+    width: 500px;
+}
+.edit-view-contents-item {
+    background: #EEE;
+    color: #111;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+.edit-title {
+    height: 50px;
+    width: 100%;
+}
+.edit-menu {
+    height: 50px;
+    width: 100%;
+}
+.edit-content {
+    height: 200px;
+    width: 100%;
+}
+.edit-footer {
+    height: 50px;
+    width: 100%;
+}
