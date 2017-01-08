@@ -1,10 +1,10 @@
-class PagesController < ApplicationController
+class PageController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Page.all
+    render file: 'public/index.html', layout: false, content_type: 'text/html'
   end
 
   # GET /pages/1
