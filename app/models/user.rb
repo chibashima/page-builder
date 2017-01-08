@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_one :page
+  has_many :page
 
-  validates :name, uniqueness: true
+  validates :name, presence: true, uniqueness: true
 end
