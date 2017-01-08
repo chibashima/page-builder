@@ -7,7 +7,6 @@ class Api::PageController < ApplicationController
     part = Part.find_or_initialize_by(page: page)
     part.contents = params[:contents]
 
-    binding.pry
     if part.save
       head :ok
     else
