@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :parts
-  resources :pages
+  root 'page#index'
+  resources :page, only: :index
   namespace :api do
     post :page, controller: :page, action: :save
   end
