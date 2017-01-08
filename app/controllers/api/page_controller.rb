@@ -1,6 +1,15 @@
 class Api::PageController < ApplicationController
   before_action :validate_params
 
+  def show
+    part = User.find_by(name: params[:user]).page.find_by(name: params[:page]).part
+    if part.present?
+      render json: part.contents, status: :ok
+    else
+      failed
+    end
+  end
+
   def save
     user = User.find_or_create_by(name: params[:user])
     page = Page.find_or_create_by(user: user, name: params[:page])
