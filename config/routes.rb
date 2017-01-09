@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root 'page#index'
-  resources :page, only: :index
+  resources :users, only: :index
+  root 'users#index'
+  post '/users/login', controller: :users, action: :login
+  resources :pages, only: :index
   namespace :api do
     post :page, controller: :page, action: :save
     get :page, controller: :page, action: :show
