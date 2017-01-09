@@ -11,7 +11,7 @@ define([], function() {
             }))
         }
         render() {
-            this.$el.html(homeViewTemplate());
+            this.$el.append(homeViewTemplate());
             return this;
         }
     }

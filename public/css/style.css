@@ -9,6 +9,12 @@ body {
     position: absolute;
     width: 100%;
 }
+textarea {
+    background: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+}
 .btn-edit,.btn-create {
     background: #EEE;
     border-top: 3px solid #DDD;
@@ -85,7 +91,7 @@ body {
     margin: 40px 0 0 0;
 }
 .edit-view-contents-inner {
-    left: 220px;
+    left: 250px;
     margin: 10px 0 0 0;
     position: absolute;
     width: 500px;
@@ -93,23 +99,18 @@ body {
 .edit-view-contents-item {
     background: #EEE;
     color: #111;
-    padding: 10px 0;
     text-align: center;
     margin: 0 0 10px 0;
 }
 .edit-title {
-    height: 50px;
     width: 100%;
 }
 .edit-menu {
-    height: 50px;
     width: 100%;
 }
 .edit-content {
-    height: 200px;
     width: 100%;
 }
 .edit-footer {
-    height: 50px;
     width: 100%;
 }

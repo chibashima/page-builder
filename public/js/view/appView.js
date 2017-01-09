@@ -17,7 +17,8 @@ define([
                 className: 'app-view-contents',
                 events: {
                     'click .btn-edit': 'renderEditPage',
-                    'click .btn-create': 'renderCreatePage'
+                    'click .btn-create': 'renderCreatePage',
+                    'click textarea': 'activeTextarea'
                 }
             }));
         }
@@ -44,6 +45,14 @@ define([
         renderEditPage() {
             this.editView = new EditView();
             this.$el.html(this.editView.render().$el);
+            $('.edit-content').sortable();
+            $('.edit-view-menu-item').draggable({
+                cursor: 'move',
+                helper: 'clone',
+                containment: 'body',
+                appendTo: '.edit-content',
+                connectToSortable: '.edit-content'
+            });
         }
 
         /**
@@ -52,6 +61,11 @@ define([
         renderPage() {
             this.pageView = new PageView();
             this.$el.html(this.pageView.render().$el);
+        }
+
+        activeTextarea(event) {
+            const target = $(event.currentTarget).attr('name');
+            CKEDITOR.replace(target);
         }
     }
     return AppView;

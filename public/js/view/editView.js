@@ -44,9 +44,9 @@ define([
          */
         getEditData() {
             this.model = new EditModel();
-            const test = this.model.getEditData();
-            if (test) {
-                this.model.set(test);
+            const editData = this.model.getEditData();
+            if (editData) {
+                this.model.set(editData);
             }
             this.setEditDataToTemplate();
             // return data;
@@ -79,10 +79,18 @@ define([
             // 編集画面のコンテンツ
             const editViewContentsTemplate =
                 `<div class="edit-view-contents-inner">
-                    <div class="edit-view-contents-item edit-title">${title}</div>
-                    <div class="edit-view-contents-item edit-menu">${menu}</div>
-                    <div class="edit-view-contents-item edit-content">${content}</div>
-                    <div class="edit-view-contents-item edit-footer">${footer}</div>
+                    <div class="edit-view-contents-item edit-title">
+                        <textarea name="editor1">${title}</textarea>
+                    </div>
+                    <div class="edit-view-contents-item edit-menu">
+                        <textarea name="editor2">${menu}</textarea>
+                    </div>
+                    <div class="edit-view-contents-item edit-content">
+                        <textarea name="editor3">${content}</textarea>
+                    </div>
+                    <div class="edit-view-contents-item edit-footer">
+                        <textarea name="editor4">${footer}</textarea>
+                    </div>
                 </div>`;
             this.$el.append(editViewContentsTemplate);
         }
