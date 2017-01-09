@@ -11,16 +11,14 @@ class Api::PageController < ApplicationController
   end
 
   def save
-    user = User.find_or_create_by(name: params[:user])
-    page = Page.find_or_create_by(user: user, name: params[:page])
+    user = User.find_or_create_by!(name: params[:user])
+    page = Page.find_or_create_by!(user: user, name: params[:page])
     part = Part.find_or_initialize_by(page: page)
     part.contents = params[:contents]
-
-    if part.save
-      head :ok
-    else
-      failed
-    end
+    part.save!
+    head :ok
+  rescue
+    failed
   end
 
   private
